@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Attendance System</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Class Attendance</h1>
+            <div class="date-controls">
+                <input type="date" id="attendanceDate">
+                <button id="saveAttendance">Save Attendance</button>
+            </div>
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="stat-label">Present</span>
+                    <span id="presentCount" class="stat-value">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Absent</span>
+                    <span id="absentCount" class="stat-value">0</span>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="filters">
+                <button class="filter-btn active" data-status="all">All</button>
+                <button class="filter-btn" data-status="present">Present</button>
+                <button class="filter-btn" data-status="absent">Absent</button>
+                <input type="text" id="searchStudent" placeholder="Search by roll no or name...">
+            </div>
+            
+            <div class="students-grid" id="studentsGrid">
+                <!-- Students will be added here dynamically -->
+            </div>
+        </main>
+    </div>
+    <script src="Index.js"></script>
+</body>
+</html>
